@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refazendo o exercicio 009.js em forma de site</title>
+</head>
+<body>
+    <h1>Teste de Time de futebol</h1>
+Digite aqui o seu time de futebol: <input type="text" name="timefut" id="timefut"> <!-- criando campo para digitação -->
+<input type="button" value="verificar" onclick="clickbotao()"> <!-- criando botão de verificação -->
+
+<div id="resposta"></div>
+
+<script>
+    function clickbotao() {
+    var timeinserido = (document.querySelector('input#timefut').value) //esse é o campo em si. Criamos essa variável para puxar a informação digitada na caixa gerada em input. A propriedade .value guarda o valor que foi inserido no campo.
+    var resposta = document.querySelector('div#resposta')
+    resposta.innerHTML = `<p>O seu time eh ${timeinserido}</p>` 
+    if (timeinserido == "Gremio") {
+        resposta.innerHTML += `Você eh gremista, PARABAINS!!!`
+ }
+resposta.innerHTML += `<p>Obrigado por participar!</p>`
+}
+
+</script>
+</body>
+</html>

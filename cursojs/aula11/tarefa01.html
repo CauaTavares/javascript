@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfândega</title>
+</head>
+<body>
+    <h1>Aeroporto</h1>
+    informe sua nacionalidade: <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Verificar" onclick="clickbotao()">
+    <div id="res">
+        
+
+    </div>
+    <script>
+        function clickbotao() {
+            var nacionalidade = (window.document.querySelector('input#txtnac').value)
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `<p>sua nacionalidade é ${nacionalidade}</p>`
+            if (nacionalidade == "Brasil") {
+                res.innerHTML += 'Você é Brasileiro'
+            } else {
+                res.innerHTML += 'Você é Estrangeiro'
+            }
+            res.innerHTML += `<p>Obrigado por participar!</p>`
+        }
+    </script>
+</body>
+</html>
